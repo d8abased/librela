@@ -1,0 +1,5 @@
+temp/
+.DS_Store
+data/output/openfda_master.csv
+data/fetch-openfda-data.ipynb
+

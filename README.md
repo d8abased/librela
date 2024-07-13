@@ -24,7 +24,7 @@ This data feeds an [Observable](https://observablehq.com/) notebook that enables
 
 ### 🍳 How The Data Is Prepared
 
-Provenance of the original EVVet data, including the contents of each cell, is considered sacred and treated as immutable. Our end-the-end process involves minimal merging and sanitizing of the data to facilitate analysis as follows:
+Provenance of the original EVVet data, including the contents of each cell, is considered sacred and treated as immutable. Our end-to-end process involves minimal merging and sanitizing of the data to facilitate analysis as follows:
 
 1. We download `csv` files from [`EVVet’s Line Listing Tool`](https://dap.ema.europa.eu/analytics/saw.dll?Dashboard&PortalPath=%2Fshared%2FEVVET3%20PW%20NEW%2FDashboards%2FPublic%20Reports%2FPWS%2FPWS%2EReports&P1=dashboard&Action=Navigate&col1=%22Product%22.%22Product%20ShortName%22&val1=%22LIBRELA%22&psa1=%22EVVET3%20PR%20NEW%22&var2=dashboard.variables%5B%27product%27%5D&cov2=%22Product%22.%22Product%20ShortName%22&val2=%22LIBRELA%22&psa2=%22EVVET3%20PR%20NEW%22). This results in multiple `csv` files (split by year) that you can find in [`data/input/evvet/`](https://github.com/open-adr/librela/tree/main/data/input/evvet).
 2. The [`data/fetch-evvet-data.ipynb`](https://github.com/open-adr/librela/blob/main/data/fetch-evvet-data.ipynb) `python` notebook iterates through all the source `csv` files, sanitizes them (concatenate, rearrange columns, drop duplicates, etc.), generates the [`evvet_master.csv`](https://raw.githubusercontent.com/open-adr/librela/main/data/output/evvet_master.csv) output file, and spits out some validation stats to ensure parity with EVVet (which is the source of truth).

@@ -12,24 +12,24 @@ Additionally, it also provides a `csv` version of the [Combined VeDDRA list of c
 ### 📥 Download
 
 The consolidated data is provided as a [`csv`](https://en.wikipedia.org/wiki/Comma-separated_values) (supported by Excel). You can download it here (right-click > download):<br/>
-[`data/output/evvet_master.csv →`](https://github.com/open-adr/librela/raw/main/data/output/evvet_master.csv)
+[`data/output/evvet_master.csv →`](https://github.com/d8abased/librela/raw/main/data/output/evvet_master.csv)
 
 Additionally, you can also download the VeDDRA `csv`:<br/>
-[`data/output/veddra.csv →`](https://github.com/open-adr/librela/raw/main/data/output/veddra.csv)
+[`data/output/veddra.csv →`](https://github.com/d8abased/librela/raw/main/data/output/veddra.csv)
 
 ### 👀 Preview
 
-This data feeds an [Observable](https://observablehq.com/) notebook that enables visualization, search, and download of the data itself. You can access it here:<br />
-[`https://observablehq.com/@openadr/librela →`](https://observablehq.com/@openadr/librela)
+This data feeds a collection of [Observable](https://observablehq.com/) notebooks that enable visualization, search, and download of the data itself. You can access it here:<br />
+[`https://librela.d8abased.com →`](https://librela.d8abased.com)
 
 ### 🍳 How The Data Is Prepared
 
 Provenance of the original EVVet data, including the contents of each cell, is considered sacred and treated as immutable. Our end-to-end process involves minimal merging and sanitizing of the data to facilitate analysis as follows:
 
-1. We download `csv` files from [`EVVet’s Line Listing Tool`](https://dap.ema.europa.eu/analytics/saw.dll?Dashboard&PortalPath=%2Fshared%2FEVVET3%20PW%20NEW%2FDashboards%2FPublic%20Reports%2FPWS%2FPWS%2EReports&P1=dashboard&Action=Navigate&col1=%22Product%22.%22Product%20ShortName%22&val1=%22LIBRELA%22&psa1=%22EVVET3%20PR%20NEW%22&var2=dashboard.variables%5B%27product%27%5D&cov2=%22Product%22.%22Product%20ShortName%22&val2=%22LIBRELA%22&psa2=%22EVVET3%20PR%20NEW%22). This results in multiple `csv` files (split by year) that you can find in [`data/input/evvet/`](https://github.com/open-adr/librela/tree/main/data/input/evvet).
-2. The [`data/fetch-evvet-data.ipynb`](https://github.com/open-adr/librela/blob/main/data/fetch-evvet-data.ipynb) `python` notebook iterates through all the source `csv` files, sanitizes them (concatenate, rearrange columns, drop duplicates, etc.), generates the [`evvet_master.csv`](https://raw.githubusercontent.com/open-adr/librela/main/data/output/evvet_master.csv) output file, and spits out some validation stats to ensure parity with EVVet (which is the source of truth).
+1. We download `csv` files from [`EVVet’s Line Listing Tool`](https://dap.ema.europa.eu/analytics/saw.dll?Dashboard&PortalPath=%2Fshared%2FEVVET3%20PW%20NEW%2FDashboards%2FPublic%20Reports%2FPWS%2FPWS%2EReports&P1=dashboard&Action=Navigate&col1=%22Product%22.%22Product%20ShortName%22&val1=%22LIBRELA%22&psa1=%22EVVET3%20PR%20NEW%22&var2=dashboard.variables%5B%27product%27%5D&cov2=%22Product%22.%22Product%20ShortName%22&val2=%22LIBRELA%22&psa2=%22EVVET3%20PR%20NEW%22). This results in multiple `csv` files (split by year) that you can find in [`data/input/evvet/`](https://github.com/d8abased/librela/tree/main/data/input/evvet).
+2. The [`data/fetch-evvet-data.ipynb`](https://github.com/d8abased/librela/blob/main/data/fetch-evvet-data.ipynb) `python` notebook iterates through all the source `csv` files, sanitizes them (concatenate, rearrange columns, drop duplicates, etc.), generates the [`evvet_master.csv`](https://raw.githubusercontent.com/d8abased/librela/main/data/output/evvet_master.csv) output file, and spits out some validation stats to ensure parity with EVVet (which is the source of truth).
  
-As for VeDDRA terms, we downloaded the source `xlsx` file [linked on page 2 here](https://www.ema.europa.eu/en/documents/regulatory-procedural-guideline/combined-veterinary-dictionary-drug-regulatory-activities-veddra-list-clinical-terms-reporting-suspected-adverse-events-animals-and-humans-veterinary-medicinal-products_en.pdf), and converted it to a `csv` while filtering out human terms. You can see the trivial `notebook` that does that work here: [`data/veddra.ipynb`](https://github.com/open-adr/librela/blob/main/data/veddra.ipynb)
+As for VeDDRA terms, we downloaded the source `xlsx` file [linked on page 2 here](https://www.ema.europa.eu/en/documents/regulatory-procedural-guideline/combined-veterinary-dictionary-drug-regulatory-activities-veddra-list-clinical-terms-reporting-suspected-adverse-events-animals-and-humans-veterinary-medicinal-products_en.pdf), and converted it to a `csv` while filtering out human terms. You can see the trivial `notebook` that does that work here: [`data/veddra.ipynb`](https://github.com/d8abased/librela/blob/main/data/veddra.ipynb)
 
 ---
 

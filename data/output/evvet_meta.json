@@ -1,6 +1,11 @@
 {
     "csvs": [
         {
+            "id": 6,
+            "name": "evvet_master_20240822.csv",
+            "timestamp": "2024-08-22T09:42:57.988370-07:00"
+        },
+        {
             "id": 5,
             "name": "evvet_master_20240813.csv",
             "timestamp": "2024-08-13T10:49:23.534975-07:00"

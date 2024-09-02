@@ -41,9 +41,9 @@ librela/
 
 Consolidated data is provided as `csv` files for both Librela and Solensia. You can download the latest files here (right-click > download):
 
-- [Librela CSV →](https://github.com/d8abased/librela/raw/main/data/output/evvet/librela.csv)
-- [Solensia CSV →](https://github.com/d8abased/librela/raw/main/data/output/evvet/solensia.csv)
-- [VeDDRA CSV →](https://github.com/d8abased/librela/raw/main/data/output/veddra.csv)
+- [Librela CSV →](https://raw.githubusercontent.com/d8abased/librela/main/data/output/evvet/librela/librela.csv)
+- [Solensia CSV →](https://raw.githubusercontent.com/d8abased/librela/main/data/output/evvet/solensia/solensia.csv)
+- [VeDDRA CSV →](https://raw.githubusercontent.com/d8abased/librela/main/data/output/veddra.csv)
 
 
 ### 👀 Preview
